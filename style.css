@@ -840,7 +840,7 @@ footer {
 
 /* ⚱️ Tablets & Pad Device Displays (max-width: 992px) */
 @media (max-width: 992px) {
-    .nav-links {
+    .nav-container {
         display: none;
     }
 
@@ -875,7 +875,7 @@ footer {
 
 /* 📱 Smartphone Mobile Screen Layouts (max-width: 576px) */
 @media (max-width: 576px) {
-    .nav-container {
+    .nav-bar {
         height: 70px;
     }
 
