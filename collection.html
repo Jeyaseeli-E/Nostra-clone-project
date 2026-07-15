@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | Nostra Premium Fashion</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="sign-bar">
+        <p>Sign Up and <strong>GET 20% OFF</strong> for your first Order</p>
+        <i class="fa-solid fa-xmark close-top-bar"></i>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header>
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="index.html">NOS<span>TRA</span></a>
+            </div>
+
+            <nav class="nav-container">
+                <a href="index.html">Home</a>
+                <a href="Collection.html" class="active">Collection</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="right-menu">
+                <div class="icon-actions">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+                <i class="fa-solid fa-bars mobile-menu-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Mobile Drawer Menu -->
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <h3>Menu</h3>
+            <i class="fa-solid fa-xmark close-drawer"></i>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html">Home</a>
+            <a href="Collection.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="drawer-overlay"></div>
+
+    <main>
+        <!-- Collections Search Hub -->
+        <section class="search-bar-section">
+            <div class="search-wrapper">
+                <input type="text" id="collection-search" placeholder="Search our premium collections..."
+                    onkeyup="filterProducts()">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </section>
+
+        <!-- Main Workspace: Sidebar Filters & Product Grid Layout -->
+        <section class="collections-workspace">
+            <div class="workspace-container">
+
+                <!-- Left Sidebar Filters -->
+                <aside class="filter-sidebar">
+                    <div class="filter-group">
+                        <h3>Occasion</h3>
+                        <label class="checkbox-container">Summer
+                            <input type="checkbox" value="summer" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Party
+                            <input type="checkbox" value="party" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Beach
+                            <input type="checkbox" value="beach" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Colors</h3>
+                        <label class="checkbox-container">Red
+                            <input type="checkbox" value="red" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Blue
+                            <input type="checkbox" value="blue" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Black
+                            <input type="checkbox" value="black" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">White
+                            <input type="checkbox" value="white" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Green
+                            <input type="checkbox" value="green" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Others
+                            <input type="checkbox" value="others" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Arrivals</h3>
+                        <label class="checkbox-container">New Arrivals
+                            <input type="checkbox" value="new" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Most Wanted
+                            <input type="checkbox" value="wanted" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Others
+                            <input type="checkbox" value="others" class="filter-check" change="filterProducts()">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </aside>
+
+                <!-- Right Side Product Display Grid -->
+                <div class="products-display-panel">
+                    <div class="products-grid" id="collections-grid">
+                        <!-- Rendered dynamically by JavaScript -->
+                    </div>
+                    <!-- Empty State Fallback -->
+                    <div id="no-products-msg" class="empty-state-box">
+                        <i class="fa-solid fa-box-open"></i>
+                        <p>No products match your custom filtering criteria.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Stay updated with our latest collections and exclusive private offers.</p>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Enter your email address...">
+                <button>Subscribe</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Luxury Footer Layout -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>NOS<span>TRA</span></h2>
+                <p>Premium fashion collections for men, women, and kids. Shop confidently with unparalleled
+                    craftsmanship and style.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="footer-links-group">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="Collection.html">Collections</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-links-group">
+                <h3>Help</h3>
+                <a href="contact.html">Contact us</a>
+                <a href="index.html">Shipping info</a>
+                <a href="index.html">Returns</a>
+
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nostra Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

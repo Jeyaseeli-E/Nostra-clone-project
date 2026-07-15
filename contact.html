@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Zylio Premium Fashion</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="sign-bar">
+        <p>Sign Up and <strong>GET 20% OFF</strong> for your first Order</p>
+        <i class="fa-solid fa-xmark close-top-bar"></i>
+    </div>
+
+    <header>
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="index.html">NOS<span>TRA</span></a>
+            </div>
+
+            <nav class="nav-container">
+                <a href="index.html">Home</a>
+                <a href="Collection.html">Collection</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <div class="right-menu">
+                <div class="icon-actions">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+                <i class="fa-solid fa-bars mobile-menu-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <h3>Menu</h3>
+            <i class="fa-solid fa-xmark close-drawer"></i>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html">Home</a>
+            <a href="Collection.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="drawer-overlay"></div>
+
+    <main>
+        <section class="contact-hero">
+            <div class="hero-blur-bg"></div>
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you. Experience bespoke fashion support.</p>
+            </div>
+        </section>
+
+        <section class="contact-container-section">
+            <div class="contact-grid">
+
+                <div class="contact-info-panel">
+                    <h2>Get In Touch</h2>
+                    <p class="subtitle">Have any questions about our premium products or tailored services? Feel free to
+                        connect with our concierge squad anytime.</p>
+
+                    <div class="info-card-list">
+                        <div class="info-card">
+                            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-text">
+                                <h4>Visit Us</h4>
+                                <p>42 Anna salai, Teynampet, Chennai-600 018, Tamil Nadu, India</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-text">
+                                <h4>Call us</h4>
+                                <p>+91 9791494913</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-text">
+                                <h4>Email us</h4>
+                                <p>hello@nostra.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel">
+                    <form id="zylio-contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="input-group">
+                            <input type="text" id="fullname" required placeholder=" ">
+                            <label for="fullname">Full Name</label>
+                            <span class="bar"></span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Email Address</label>
+                            <span class="bar"></span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" id="subject" required placeholder=" ">
+                            <label for="subject">Subject</label>
+                            <span class="bar"></span>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Message</label>
+                            <span class="bar"></span>
+                        </div>
+
+                        <button type="submit" class="btn-submit-premium">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="form-success-alert" class="success-message-box">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <p>Thank you! Your inquiry has been routed to our fashion advisors.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Stay updated with our latest collections and exclusive private offers.</p>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Enter your email address...">
+                <button>Subscribe</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>NOS<span>TRA</span></h2>
+                <p>Premium fashion collections for men, women, and kids. Shop confidently with unparalleled
+                    craftsmanship and style.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="footer-links-group">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="Collection.html">Collections</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-links-group">
+                <h3>Help</h3>
+                <a href="contact.html">Contact us</a>
+                <a href="index.html">Shipping info</a>
+                <a href="index.html">Returns</a>
+
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nostra Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+</body>
+
+</html>

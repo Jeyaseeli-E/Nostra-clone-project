@@ -1,0 +1,136 @@
+ <!-- Zylio Premium Brands Section -->
+        <section class="brands-section">
+            <div class="brands-container">
+
+                <!-- Brand 1: Nike (Image asset swap) -->
+                <div class="brand-item">
+                    <div class="brand-logo-wrapper">
+                        <img src="./Nike.jpg" alt="Nike" class="brand-img">
+                    </div>
+                    <span class="brand-name">Nike</span>
+                </div>
+
+                <!-- Brand 2: Adidas (Image asset swap) -->
+                <div class="brand-item">
+                    <div class="brand-logo-wrapper">
+                        <img src="./Adidas.jpg" alt="Adidas" class="brand-img">
+                    </div>
+                    <span class="brand-name">Adidas</span>
+                </div>
+
+                <!-- Brand 3: Peter England (Icon remains) -->
+                <div class="brand-item">
+                    <div class="brand-logo-wrapper">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <span class="brand-name">Peter England</span>
+                </div>
+
+                <!-- Brand 4: Gucci (Icon remains) -->
+                <div class="brand-item">
+                    <div class="brand-logo-wrapper">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <span class="brand-name">Gucci</span>
+                </div>
+
+                <!-- Brand 5: Levi's (Icon remains) -->
+                <div class="brand-item">
+                    <div class="brand-logo-wrapper">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <span class="brand-name">Levi's</span>
+                </div>
+
+                <!-- Brand 6: Puma (Image asset swap) -->
+                <div class="brand-item">
+                    <div class="brand-logo-wrapper">
+                        <img src="./Puma.jpg" alt="Puma" class="brand-img">
+                    </div>
+                    <span class="brand-name">Puma</span>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        /* Brands Hub Section Layout */
+.brands-section {
+    padding: 60px 4%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.brands-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.brand-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #111112;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 📐 Container to force equal layout dimensions for both images & icons */
+.brand-logo-wrapper {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+/* Size parameters matching standard font sizes */
+.brand-logo-wrapper i {
+    font-size: 45px;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+/* Custom dimensions for images */
+.brand-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Forces source graphics to render solid black initially */
+    filter: brightness(0);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.brand-name {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.4s ease;
+}
+
+/* 🌟 Gold Hover Effects (Applies to font icons, images, and labels) */
+.brand-item:hover span {
+    color: #C5A880;
+}
+
+.brand-item:hover .brand-name {
+    color: #C5A880;
+}
+
+.brand-item:hover i {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.brand-item:hover .brand-img {
+    transform: translateY(-5px) scale(1.05);
+    /* Exact CSS matrix calculation to shift solid black (#000000) to Satin Gold (#C5A880) */
+    filter: sepia(35%) saturate(700%) hue-rotate(345deg) brightness(88%) contrast(87%);
+}
+
+
